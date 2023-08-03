@@ -1,0 +1,12 @@
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\cookie-a00551315fcf4728.rmeta: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\builder.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\parse.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\jar.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\delta.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\draft.rs
+
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\libcookie-a00551315fcf4728.rlib: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\builder.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\parse.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\jar.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\delta.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\draft.rs
+
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\cookie-a00551315fcf4728.d: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\builder.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\parse.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\jar.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\delta.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\draft.rs
+
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\lib.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\builder.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\parse.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\jar.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\delta.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\cookie-0.11.5\src\draft.rs:
