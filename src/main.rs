@@ -11,7 +11,7 @@ fn index() -> &'static str {
 }
 
 fn main() {
-    let static_path: PathBuf = PathBuf::from("C:/Users/carso/Github/Rust-Task-Manager/webpages");
+    let static_path: PathBuf = PathBuf::from("C:/Users/carso/Github/Rust-Task-Manager/templates");
     rocket::ignite()
         .mount("/", StaticFiles::from(static_path))
         .mount("/static", routes![index])
