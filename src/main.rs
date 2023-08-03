@@ -14,5 +14,6 @@ fn main() {
     let static_path: PathBuf = PathBuf::from("C:/Users/carso/Github/Rust-Task-Manager/webpages");
     rocket::ignite()
         .mount("/", StaticFiles::from(static_path))
+        .mount("/static", routes![index])
         .launch();
 }
