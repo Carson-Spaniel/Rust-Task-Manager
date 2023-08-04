@@ -1,10 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Rocket Webpage</title>
+    <title>Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .task-due-red {
+            background-color: #ffcccc;
+        }
+
+        .task-due-yellow {
+            background-color: #fff2cc;
+        }
+
+        .task-due-green {
+            background-color: #ccffcc;
+        }
+
+        .delete-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            color: #e74c3c;
+        }
+
+        .task-done {
+            text-decoration: line-through;
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, Rocket!</h1>
-    <p>Welcome to my Rocket-powered webpage!</p>
+    <h1>Task Manager</h1>
+    <div>
+        <input type="text" id="newTaskInput" placeholder="Enter a new task">
+        <input type="text" id="dueDateInput" placeholder="Select a due date">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="taskList">
+        <!-- Tasks will be added dynamically here -->
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.js"></script>
+    <script>
+        flatpickr("#dueDateInput", {
+            dateFormat: "m-d-Y",
+        });
+    </script>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById("newTaskInput");
+            const task = input.value.trim();
+            const dueDate = document.getElementById("dueDateInput").value; // Corrected ID here
+
+            if (task !== "") {
+                const taskList = document.getElementById("taskList");
+                const li = document.createElement("li");
+
+                const currentDate = new Date();
+                const taskDate = parseDate(dueDate);
+                const timeDiff = taskDate.getTime() - currentDate.getTime();
+                const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+                if (daysDiff < 0) {
+                    li.classList.add("task-due-red"); // Past due date (red)
+                } else if (daysDiff <= 3) {
+                    li.classList.add("task-due-yellow"); // Due within 3 days (yellow)
+                } else {
+                    li.classList.add("task-due-green"); // Due more than 3 days later (green)
+                }
+
+                li.innerHTML = `<input type="checkbox" onclick="toggleTask(this)">
+                                <span>${task}</span>
+                                <span>${formatDate(dueDate)}</span>
+                                <span class="delete-btn" onclick="deleteTask(this)">X</span>`;
+                taskList.appendChild(li);
+
+                sortTasksByDueDate(); // Sort tasks based on due date
+                input.value = "";
+                document.getElementById("dueDateInput").value = ""; // Corrected ID here
+            }
+        }
+
+        function deleteTask(element) {
+            const taskList = document.getElementById("taskList");
+            const li = element.parentNode;
+            taskList.removeChild(li);
+        }
+
+        function toggleTask(checkbox) {
+            const taskItem = checkbox.nextElementSibling;
+            const taskDate = taskItem.nextElementSibling;
+            if (checkbox.checked) {
+                taskItem.classList.add("task-done");
+                taskDate.classList.add("task-done");
+                setTimeout(function() {
+                    deleteTask(checkbox); // Wait for 500ms and then delete the task
+                }, 500);
+            } else {
+                taskItem.classList.remove("task-done");
+                taskDate.classList.remove("task-done");
+                sortTasksByDueDate(); // Sort tasks based on due date after unchecking a task
+            }
+        }
+
+        function sortTasksByDueDate() {
+            const taskList = document.getElementById("taskList");
+            const tasks = Array.from(taskList.getElementsByTagName("li"));
+
+            tasks.sort((a, b) => {
+                const dueA = parseDate(a.querySelector("span:last-child").textContent);
+                const dueB = parseDate(b.querySelector("span:last-child").textContent);
+
+                if (!dueA && dueB) {
+                    return 1; // Task A has no due date, so it should be considered lower priority
+                } else if (dueA && !dueB) {
+                    return -1; // Task B has no due date, so it should be considered lower priority
+                } else if (dueA && dueB) {
+                    return dueA - dueB; // Sort by due date
+                }
+
+                return 0;
+            });
+
+            taskList.innerHTML = ""; // Clear the task list
+            tasks.forEach(task => taskList.appendChild(task)); // Add tasks back in the sorted order
+        }
+
+        function parseDate(dateString) {
+            const parts = dateString.split("-");
+            if (parts.length === 3) {
+                // Note: Use parseInt to convert the string parts to numbers
+                const month = parseInt(parts[0], 10) - 1; // JavaScript Date uses zero-indexed months
+                const day = parseInt(parts[1], 10);
+                const year = parseInt(parts[2], 10);
+                return new Date(year, month, day);
+            }
+            return null;
+        }
+
+        function formatDate(dateString) {
+            const date = parseDate(dateString);
+            if (date) {
+                const day = String(date.getDate()).padStart(2, "0");
+                const month = String(date.getMonth() + 1).padStart(2, "0");
+                const year = date.getFullYear();
+
+                // Calculate the time difference in milliseconds between the due date and the current date
+                const currentDate = new Date();
+                const timeDiff = date.getTime() - currentDate.getTime();
+
+                // Convert milliseconds to days
+                const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+                // Set appropriate class based on the time difference
+                let taskClass = "";
+                if (daysDiff < 0) {
+                    taskClass = "task-due-red"; // Past due date (red)
+                } else if (daysDiff <= 3) {
+                    taskClass = "task-due-yellow"; // Due within 3 days (yellow)
+                } else {
+                    taskClass = "task-due-green"; // Due more than 3 days later (green)
+                }
+
+                return `<span class="${taskClass}">${month}-${day}-${year}</span>`;
+            }
+            return "";
+        }
+    </script>
 </body>
 </html>
