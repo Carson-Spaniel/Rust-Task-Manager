@@ -1,0 +1,13 @@
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\toml-d64d20a5c33c7902.rmeta: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\map.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\value.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\de.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\ser.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\macros.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\edit.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\fmt.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\table.rs
+
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\toml-d64d20a5c33c7902.d: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\map.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\value.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\de.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\ser.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\macros.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\edit.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\fmt.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\table.rs
+
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\lib.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\map.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\value.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\de.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\ser.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\macros.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\edit.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\fmt.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.7.6\src\table.rs:

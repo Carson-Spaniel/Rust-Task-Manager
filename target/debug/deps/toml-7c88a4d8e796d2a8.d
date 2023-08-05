@@ -1,0 +1,12 @@
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\toml-7c88a4d8e796d2a8.rmeta: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\value.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\datetime.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\ser.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\de.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\tokens.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\macros.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\spanned.rs
+
+C:\Users\carso\Github\Rust-Task-Manager\target\debug\deps\toml-7c88a4d8e796d2a8.d: C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\lib.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\value.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\datetime.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\ser.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\de.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\tokens.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\macros.rs C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\spanned.rs
+
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\lib.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\value.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\datetime.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\ser.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\de.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\tokens.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\macros.rs:
+C:\Users\carso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.4.10\src\spanned.rs:

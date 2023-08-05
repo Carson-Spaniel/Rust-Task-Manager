@@ -130,6 +130,10 @@
             if (checkbox.checked) {
                 taskItem.classList.add("task-done");
                 taskDate.classList.add("task-done");
+
+                // Hide the checkbox when marked as completed
+                checkbox.style.display = "none";
+
                 setTimeout(function() {
                     taskItem.remove(); // Remove the task from the current list
                     completedTaskList.appendChild(taskItem); // Move the task to the completed list
@@ -140,10 +144,14 @@
                 taskDate.classList.remove("task-done");
                 const taskList = document.getElementById("taskList");
                 taskList.appendChild(taskItem); // Move the task back to the tasks list
+
+                // Show the checkbox when marked as not completed
+                checkbox.style.display = "inline-block";
             }
 
             sortTasksByDueDate(); // Sort tasks based on due date after checking/unchecking a task
         }
+
 
         function sortTasksByDueDate() {
             const taskList = document.getElementById("taskList");
