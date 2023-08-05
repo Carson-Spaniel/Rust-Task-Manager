@@ -60,8 +60,13 @@
         <input type="text" id="dueDateInput" placeholder="Select a due date">
         <button onclick="addTask()">Add Task</button>
     </div>
+    <h2>Tasks</h2>
     <ul id="taskList">
         <!-- Tasks will be added dynamically here -->
+    </ul>
+    <h2>Completed Tasks</h2>
+    <ul id="completedTaskList">
+        <!-- Completed tasks will be added dynamically here -->
     </ul>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.6/dist/flatpickr.min.js"></script>
@@ -107,25 +112,37 @@
         }
 
         function deleteTask(element) {
-            const taskList = document.getElementById("taskList");
-            const li = element.parentNode;
-            taskList.removeChild(li);
+            const taskItem = element.parentNode;
+            if (taskItem.parentNode.id === "taskList") {
+                // If the task is in the "Tasks" section, remove it from the "Tasks" list
+                taskItem.remove();
+            } else if (taskItem.parentNode.id === "completedTaskList") {
+                // If the task is in the "Completed Tasks" section, remove it from the "Completed Tasks" list
+                taskItem.remove();
+            }
         }
 
         function toggleTask(checkbox) {
-            const taskItem = checkbox.nextElementSibling;
-            const taskDate = taskItem.nextElementSibling;
+            const taskItem = checkbox.parentNode;
+            const taskDate = taskItem.querySelector("span:last-child");
+            const completedTaskList = document.getElementById("completedTaskList");
+
             if (checkbox.checked) {
                 taskItem.classList.add("task-done");
                 taskDate.classList.add("task-done");
                 setTimeout(function() {
-                    deleteTask(checkbox); // Wait for 500ms and then delete the task
+                    taskItem.remove(); // Remove the task from the current list
+                    completedTaskList.appendChild(taskItem); // Move the task to the completed list
+                    checkbox.checked = false; // Reset the checkbox state for the next time
                 }, 500);
             } else {
                 taskItem.classList.remove("task-done");
                 taskDate.classList.remove("task-done");
-                sortTasksByDueDate(); // Sort tasks based on due date after unchecking a task
+                const taskList = document.getElementById("taskList");
+                taskList.appendChild(taskItem); // Move the task back to the tasks list
             }
+
+            sortTasksByDueDate(); // Sort tasks based on due date after checking/unchecking a task
         }
 
         function sortTasksByDueDate() {
